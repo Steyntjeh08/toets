@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #bbb695;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background-color: black;
+}
+
+
+/* Navbar */
+
+nav {
+    padding: 20px 0;
+}
+
+.logo img {
+    max-height: 70px;
+    float: left;
+}
+
+#hamburger-button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    color: #bbb695;
+    cursor: pointer;
+    float: right;
+}
+
+#menu {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    list-style-type: none;
+}
+
+#menu li {
+    border: 0;
+    text-align: center;
+    padding: 5px 25px;
+    color: white;
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;
+}
+#menu li a:hover {
+    color: #bbb695;
+}
+
+.main {
+    padding: 20px;
+}
+
+.main p {
+    margin-bottom: 20px;
+}
+
+
+/* personages */
+
+.personage {
+    border: solid 3px #bbb695;
+    margin: 20px 0;
+}
+
+.personage h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.personage img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.personage p {
+    padding: 20px;
+}
+
+
+/* footer items */
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+footer .email-input {
+    margin-top: 20px;
+    background-color: #bbb695;
+    color: white;
+}
+
+footer .btn {
+    margin-top: 20px;
+}
+
+
+/* button */
+
+.btn {
+    font-weight: 0;
+    font-size: 14px;
+    color: white;
+    background-color: #bbb695;
+    padding: 10px 30px;
+    border: solid #ffffff 2px;
+    box-shadow: black;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: 1000ms;
+    padding: 10px 50px;
+    transform: translateY(-0px);
+    background-color: #bbb695;
+    color: #bbb695;
+    border: solid 2px #bbb695;
+}
+
+
+/* media queries */
+@media(max-width: 768px) {
+
+    #menu.active {
+        display: block;
+        background: #bbb695;
+    }
+
+}
+@media (min-width: 768px) {
+    #hamburger-button{
+        display: none;
+    }
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    #menu{
+        display: inline;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .personage{
+        width: 48%;
+    }
+    #personageHead{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #footerDiv{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footerDiv1{
+        width: 50%;
+    }
+    .footerDiv2{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .personage{
+        width: 24%;
+    }
+    .footerDiv1{
+        width: 74%;
+    }
+    .footerDiv2{
+        width: 25%;
+    }
+}
